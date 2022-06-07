@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-
 import './App.css';
+import RecipeGrid from "./RecipeGrid";
 const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 function App() {
@@ -31,7 +31,11 @@ function App() {
       <header className="App-header">
         <h1>Helllo</h1>
       </header>
-   
+      <div className="row">
+        <div className="col-md-3">
+          <RecipeGrid isLoading={isLoading} items={items} />
+        </div>
+      </div>
     </div>
   );
 }
