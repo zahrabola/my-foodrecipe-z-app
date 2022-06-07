@@ -20,6 +20,7 @@ return (
           <h5 className="card-title">{item.strMeal}</h5>
           <p className="card-text">Category: {item.strCategory}</p>
           <p className="card-text">Nationality: {item.strArea}</p>
+          <p className="card-text"> {item.strTags}</p>
           <button
             className="openModalBtn"
             onClick={() => {

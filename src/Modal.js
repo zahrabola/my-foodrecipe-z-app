@@ -10,6 +10,15 @@ const Modal = ({ show, item, setOpenModal }) => {
           <h5 className="modal-title">{item.strMeal}</h5>
           <div className="modal-body">
             <p className="modal-text">Instructions: {item.strInstructions} </p>
+            <button>
+              <a
+                href={"https://www.themealdb.com/meal/" + item.idMeal}
+                target="_blank"
+              >
+                Ingredients
+              </a>
+            </button>
+            
           </div>
           <div className="titleCloseBtn">
             <button
