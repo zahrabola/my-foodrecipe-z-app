@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 const RecipeCard = ({item}) =>{
+    const [modalOpen, setModalOpen] = useState(false);
+
 return (
   <div className="row">
     <div className="col-md-4">
@@ -9,12 +12,17 @@ return (
           <h5 className="card-title">{item.strMeal}</h5>
           <p className="card-text">Category: {item.strCategory}</p>
           <p className="card-text">Nationality: {item.strArea}</p>
-          <button>
-            <a href="#" class="btn">
-              Modal
-            </a>
-          </button>
         </div>
+        <button
+          className="openModalBtn"
+          onClick={() => {
+            setModalOpen(true);
+          }}
+        >
+          Open
+        </button>
+
+        {modalOpen && <Modal setOpenModal={setModalOpen} />}
       </div>
     </div>
   </div>

@@ -7,10 +7,10 @@ const RecipeGrid = ({ items, isLoading }) => {
     <section className="cards">
       {items.map((item) => (
         <RecipeCard key={item.strMeal} item={item}></RecipeCard>
+        
       ))}
     </section>
   );
-
 };
 
 

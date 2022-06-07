@@ -7,6 +7,7 @@ function App() {
   const [items, setItems] = useState([]);
     const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+      
 
 
 
@@ -31,10 +32,9 @@ function App() {
       <header className="App-header">
         <h1>Helllo</h1>
       </header>
-      <div className="row">
-        <div className="col-md-3">
+      <div className="container">
           <RecipeGrid isLoading={isLoading} items={items} />
-        </div>
+        
       </div>
     </div>
   );
