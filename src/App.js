@@ -3,6 +3,7 @@ import './App.css';
 import RecipeGrid from "./RecipeGrid";
 import SearchBar from "./SearchBar";
 const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+//https://www.themealdb.com/api.php -- link 
 //https://www.themealdb.com/api/json/v1/1/search.php?f=a
  function App() {
   const [items, setItems] = useState([]);
