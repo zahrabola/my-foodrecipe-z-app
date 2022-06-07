@@ -12,6 +12,7 @@ function App() {
 
 
 
+
   const searchRecipes = async () => {
     setIsLoading(true);
     const url = Apiurl + query;
@@ -33,8 +34,8 @@ function App() {
         <h1>Helllo</h1>
       </header>
       <div className="container">
-          <RecipeGrid isLoading={isLoading} items={items} />
-        
+      
+        <RecipeGrid isLoading={isLoading} items={items} />
       </div>
     </div>
   );
