@@ -1,22 +1,24 @@
-import React, { useState } from "react";
-
-const SearchBar = ({ getQuery }) => {
-  const [text, setText] = useState("");
-  const onChange = (q) => {
-    setText(q);
-    getQuery(q);
-  };
+import React from "react";
+const SearchBar = ({ handleSubmit, query, isLoading, setQuery }) => {
+ 
 
   return (
     <section className="search">
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
-          type="text"
+          value={query}
           className="form-control"
           placeholder="Search Recipe"
-          value={text}
-          onChange={(e) => onChange(e.target.value)}
+          name="query"
+          disabled={isLoading}
+          onChange={(event) => setQuery(event.target.value)}
           autoFocus
+        />
+        <input
+          disabled={isLoading || !query}
+          type="submit"
+          className="btn"
+          value="Search"
         />
       </form>
     </section>

@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import './App.css';
 import RecipeGrid from "./RecipeGrid";
+import SearchBar from "./SearchBar";
 const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-
-function App() {
+//https://www.themealdb.com/api/json/v1/1/search.php?f=a
+ function App() {
   const [items, setItems] = useState([]);
-    const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-      
-
-
-
-
 
   const searchRecipes = async () => {
     setIsLoading(true);
@@ -22,19 +18,29 @@ function App() {
     setItems(data.meals);
     setIsLoading(false);
   };
- useEffect(() => {
-   searchRecipes();
- }, []);
+  useEffect(() => {
+    searchRecipes();
+  }, []);
 
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    searchRecipes();
+  };
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Helllo</h1>
+        <h1>Zahra Recipe App</h1>
       </header>
+      <div className="row">
+        <SearchBar
+          isLoading={isLoading}
+          query={query}
+          setQuery={setQuery}
+          handleSubmit={handleSubmit}
+        />
+      </div>
       <div className="container">
-      
         <RecipeGrid isLoading={isLoading} items={items} />
       </div>
     </div>
