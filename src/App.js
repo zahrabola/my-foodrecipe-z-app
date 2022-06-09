@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import './App.css';
+
 import RecipeGrid from "./RecipeGrid";
 import SearchBar from "./SearchBar";
 const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+
 //https://www.themealdb.com/api.php -- link 
 //https://www.themealdb.com/api/json/v1/1/search.php?f=a
  function App() {
@@ -23,6 +25,7 @@ const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   useEffect(() => {
     searchRecipes();
   }, []);
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,7 +45,7 @@ const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
           handleSubmit={handleSubmit}
         />
       </div>
-      <div className="container">
+      <div className="row">
         <RecipeGrid isLoading={isLoading} items={items} />
       </div>
     </div>

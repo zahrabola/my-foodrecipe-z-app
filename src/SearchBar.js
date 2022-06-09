@@ -7,7 +7,7 @@ const SearchBar = ({ handleSubmit, query, isLoading, setQuery }) => {
       <form onSubmit={handleSubmit}>
         <input
           value={query}
-          className="form-control"
+          className="formcontrol"
           placeholder="Search Recipe"
           name="query"
           disabled={isLoading}
@@ -17,7 +17,7 @@ const SearchBar = ({ handleSubmit, query, isLoading, setQuery }) => {
         <input
           disabled={isLoading || !query}
           type="submit"
-          className="btn"
+          className="btn-search"
           value="Search"
         />
     

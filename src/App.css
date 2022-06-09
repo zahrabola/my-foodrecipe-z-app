@@ -1,4 +1,60 @@
 .App {
   text-align: center;
+   background-color: rgb(36, 38, 65);
+   
+}
+h1{
+  color: white
 }
 
+.formcontrol {
+  border-radius: 5px;
+  width: 40%;
+padding: 10px;
+margin-right: 5px;
+
+}
+.btn-search {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(26, 134, 25);
+  color: white;
+}
+.row{
+  padding: 10px;
+}
+.col{
+padding-bottom:10px ;
+}
+.card {
+  cursor: pointer;
+  background-color: transparent;
+  perspective: 1000px;
+  bottom: 0;
+}
+.cards {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+   background-color: rgb(36, 38, 65);
+}
+@media (max-width: 820px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.openModalBtn{
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(36, 38, 65);
+  color: white;
+  border: none;
+  margin: 5px;
+}

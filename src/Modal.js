@@ -27,7 +27,7 @@ const Modal = ({ show, item, setOpenModal }) => {
                 setOpenModal(false);
               }}
             >
-              X
+              Close
             </button>
           </div>
         </div>
