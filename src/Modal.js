@@ -1,4 +1,5 @@
 import React from "react";
+import "./Modal.css";
 const Modal = ({ show, item, setOpenModal }) => {
   if (!show) {
     return null;

@@ -20,6 +20,7 @@ const SearchBar = ({ handleSubmit, query, isLoading, setQuery }) => {
           className="btn"
           value="Search"
         />
+    
       </form>
     </section>
   );
