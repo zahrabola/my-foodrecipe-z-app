@@ -15,12 +15,11 @@ const Modal = ({ show, item, setOpenModal }) => {
               <a
                 href={"https://www.themealdb.com/meal/" + item.idMeal}
                 target="_blank"
-                rel="noreferre"
+                rel="noreferrer"
               >
                 Ingredients
               </a>
             </button>
-            
           </div>
           <div className="titleCloseBtn">
             <button
