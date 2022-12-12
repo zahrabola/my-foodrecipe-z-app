@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import './App.css';
-
 import RecipeGrid from "./RecipeGrid";
 import SearchBar from "./SearchBar";
 const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+//const Drinkurl =
+ // "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 //https://www.themealdb.com/api.php -- link 
 //https://www.themealdb.com/api/json/v1/1/search.php?f=a
@@ -11,7 +12,7 @@ const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   const [items, setItems] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const[category, setCategory] = useState()
+
 
   const searchRecipes = async () => {
     setIsLoading(true);
@@ -22,9 +23,11 @@ const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
     setItems(data.meals);
     setIsLoading(false);
   };
-  useEffect(() => {
+
+ /* useEffect(() => {
     searchRecipes();
-  }, []);
+  }, []); */
+  
   
 
   const handleSubmit = (event) => {
@@ -44,6 +47,7 @@ const Apiurl= "https://www.themealdb.com/api/json/v1/1/search.php?s=";
           setQuery={setQuery}
           handleSubmit={handleSubmit}
         />
+     
       </div>
       <div className="row">
         <RecipeGrid isLoading={isLoading} items={items} />
